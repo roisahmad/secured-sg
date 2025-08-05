@@ -6,6 +6,8 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   final IconData? rightIcon;
   final VoidCallback? onRightTap;
   final Color backgroundColor;
+  final GlobalKey? rightIconKey;
+  final Color? rightIconColor;
 
   const AppbarWidget({
     super.key,
@@ -14,6 +16,8 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
     this.rightIcon,
     this.onRightTap,
     this.backgroundColor = const Color(0xFF161857),
+    this.rightIconKey,
+    this.rightIconColor = const Color(0xFF4e94be),
   });
 
   @override
@@ -49,7 +53,8 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         if (rightIcon != null)
           IconButton(
-            icon: Icon(rightIcon, color: const Color(0xFF4e94be)),
+            icon: Icon(rightIcon, color: rightIconColor),
+            key: rightIconKey,
             onPressed: onRightTap,
           ),
       ],

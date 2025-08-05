@@ -30,6 +30,7 @@ class MenuItem {
 
 class Constants {
   static const Color primaryColor = Color(0xFF161857);
+  static const Color primaryColorTransparent = Color(0x99161857);
 
   static final List<MenuItem> menuItems = [
     MenuItem(

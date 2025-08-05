@@ -19,7 +19,7 @@ class CardMenuWidget extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0x99FFFFFF),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -37,8 +37,8 @@ class CardMenuWidget extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Container(
-                width: 50,
-                height: 50,
+                width: 80,
+                height: 80,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: Colors.transparent,
@@ -46,7 +46,7 @@ class CardMenuWidget extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: Center(
-                    child: Image.asset(icon, width: 50, height: 50),
+                    child: Image.asset(icon, width: 80, height: 80),
                   ),
                 ),
               ),
