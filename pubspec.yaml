@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  carousel_slider: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +27,32 @@ flutter:
     - assets/images/claim.png
     - assets/images/default_bg.png
     - assets/images/ea_bg.png
+    - assets/images/ea_icon.png
+    - assets/images/fa_bg.png
+    - assets/images/fa_icon.png
+    - assets/images/fitness.png
+    - assets/images/fm_bg.png
+    - assets/images/fm_icon.png
+    - assets/images/FM.png
+    - assets/images/hitpay-example.png
+    - assets/images/ir_bg.png
+    - assets/images/ir_icon.png
+    - assets/images/payment_bg.png
+    - assets/images/payment_icon.png
+    - assets/images/people-1.jpg
+    - assets/images/people-2.jpg
+    - assets/images/people-3.jpg
+    - assets/images/people-4.jpg
+    - assets/images/ro_icon.png
+    - assets/images/sample.png
+    - assets/images/singapore.png
+    - assets/images/slider-new.jpg
+    - assets/images/slider2-new.jpg
+    - assets/images/slider3-new.jpg
+    - assets/images/slider4.jpg
+    - assets/images/slider6.jpg
+    - assets/images/ss_icon.png
+    - assets/images/tennis.png
+    - assets/images/vr_bg.png
+    - assets/images/vr_icon.png
+    - assets/images/VR.png

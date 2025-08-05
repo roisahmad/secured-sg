@@ -78,7 +78,12 @@ class LoginView extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 16),
-                      Button(text: 'LOG IN', onPressed: () {}),
+                      Button(
+                        text: 'LOG IN',
+                        onPressed: () {
+                          Navigator.pushNamed(context, AppRoutes.home);
+                        },
+                      ),
                     ],
                   ),
                 ),
