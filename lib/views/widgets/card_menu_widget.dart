@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secure_sg_app/utils/constants.dart';
 
 class CardMenuWidget extends StatelessWidget {
   final String title1;
@@ -63,6 +64,86 @@ class CardMenuWidget extends StatelessWidget {
               style: const TextStyle(fontSize: 12, color: Colors.black),
               textAlign: TextAlign.center,
             ),
+        ],
+      ),
+    );
+  }
+}
+
+class CardMenu2Widget extends StatelessWidget {
+  final String title1;
+  final String? title2;
+  final IconData icon;
+  final String? access;
+
+  const CardMenu2Widget({
+    super.key,
+    required this.title1,
+    this.title2,
+    required this.icon,
+    this.access,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: const [
+          BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
+        ],
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            width: 40,
+            height: 40,
+            decoration: const BoxDecoration(
+              color: Constants.primaryColorTransparent, // latar mint/cyan muda
+              shape: BoxShape.circle,
+            ),
+            child: Center(
+              // child: Image.asset(
+              //   icon,
+              //   width: 32,
+              //   height: 32,
+              //   color: Constants.primaryColor, // warna teal
+              // ),
+              child: Icon(
+                icon, // ini adalah IconData
+                color: Constants.primaryColor,
+                size: 24,
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                title1,
+                style: const TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+              if (title2 != null)
+                Text(
+                  title2!,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+            ],
+          ),
         ],
       ),
     );

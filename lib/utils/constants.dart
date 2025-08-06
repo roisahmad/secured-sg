@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class MenuItem {
   final String title1;
   final String? title2;
-  final String imagePath;
+  final IconData? icon;
   final String? routeName;
 
   const MenuItem({
     required this.title1,
     this.title2,
-    required this.imagePath,
+    required this.icon,
     this.routeName,
   });
 
@@ -17,12 +17,12 @@ class MenuItem {
     String? title1,
     String? title2,
     String? routeName,
-    String? imagePath,
+    IconData? icon,
   }) {
     return MenuItem(
       title1: title1 ?? this.title1,
       title2: title2 ?? this.title2,
-      imagePath: imagePath ?? this.imagePath,
+      icon: icon ?? this.icon,
       routeName: routeName ?? this.routeName,
     );
   }
@@ -30,52 +30,53 @@ class MenuItem {
 
 class Constants {
   static const Color primaryColor = Color(0xFF161857);
-  static const Color primaryColorTransparent = Color(0x99161857);
+  static const Color primaryColorTransparent = Color(0x77161857);
+  static const Color secondaryColor = Color.fromARGB(255, 25, 27, 95);
 
   static final List<MenuItem> menuItems = [
     MenuItem(
       title1: "Facility",
       title2: "Management",
-      imagePath: "assets/images/fm_icon.png",
+      icon: Icons.home_work_rounded,
       routeName: "facilityManagement",
     ),
     MenuItem(
       title1: "Visitor",
       title2: "Registration",
-      imagePath: "assets/images/vr_icon.png",
+      icon: Icons.supervisor_account,
       routeName: "visitorRegistration",
     ),
     MenuItem(
       title1: "Enforcement",
       title2: "Action",
-      imagePath: "assets/images/ea_icon.png",
+      icon: Icons.verified_user_outlined,
       routeName: "enforcementAction",
     ),
     MenuItem(
       title1: "Feedback",
       title2: "And Complain",
-      imagePath: "assets/images/fa_icon.png",
+      icon: Icons.create_outlined,
       routeName: "feedbackAndComplain",
     ),
     MenuItem(
       title1: "Incident",
       title2: "Report",
-      imagePath: "assets/images/ir_icon.png",
+      icon: Icons.attach_file_outlined,
       routeName: "incidentReport",
     ),
     MenuItem(
       title1: "Payments",
-      imagePath: "assets/images/payment_icon.png",
+      icon: Icons.payment_outlined,
       routeName: "payments",
     ),
     MenuItem(
       title1: "Site SOP",
-      imagePath: "assets/images/ss_icon.png",
+      icon: Icons.menu_book_outlined,
       routeName: "siteSOP",
     ),
     MenuItem(
       title1: "Claim",
-      imagePath: "assets/images/cl_icon.png",
+      icon: Icons.edit_calendar_outlined,
       routeName: "claim",
     ),
   ];
